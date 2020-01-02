@@ -24,6 +24,6 @@ The libraries "SimpleElectric" and "SimpleMechanic" are dependencies for the exa
 * Open the OpenModelica Connection Editor (I used Version 1.13.2 for Windows)
 * Load all three libraries that are stored in this repository
 * Navigate to the "Examples" package of the Control-Library and open the crane-model
-* check the parameters of the used elements in the schematic view
+* Check the parameters of the used elements in the schematic view
 * Simulate the model and feel free to change the control parameters
 
