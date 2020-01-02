@@ -5,16 +5,16 @@ package SimpleMechanic
   package Interfaces
     extends Modelica.Icons.InterfacesPackage;
 
-    connector FlangeR "Rotations-Flange"
-      SI.Angle phi "Winkel";
-      flow SI.Torque tau "Drehmoment";
+    connector FlangeR "rotation flange"
+      SI.Angle phi "angle";
+      flow SI.Torque tau "torque";
       annotation(
         Diagram(coordinateSystem(initialScale = 0.1)));
     end FlangeR;
 
-    connector FlangeT "Translation-Flange"
-      SI.Position s "Position";
-      flow SI.Force f "Gerichtete Kraft";
+    connector FlangeT "translation flange"
+      SI.Position s "position";
+      flow SI.Force f "force";
     end FlangeT;
 
     connector FlangeR_N

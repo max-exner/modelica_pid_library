@@ -142,12 +142,12 @@ y=K*der(u);
   Control.Components.min_max min_max1(max = 24, min = -24)  annotation(
         Placement(visible = true, transformation(origin = {4,10}, extent = {{-16, -16}, {16, 16}}, rotation = 0)));
   SimpleMechanic.Basis.inertia_trans inertia_trans1(M = 1, activate_gravity = false, init = true, s0 = 0.6, v0 = 0)  annotation(
-        Placement(visible = true, transformation(origin = {90, 2}, extent = {{10, -10}, {-10, 10}}, rotation = 180)));
+        Placement(visible = true, transformation(origin = {74, -24}, extent = {{10, -10}, {-10, 10}}, rotation = 90)));
     equation
-      connect(inertia_trans1.y, control_deviation.y) annotation(
-        Line(points = {{90, -2}, {90, -2}, {90, -24}, {-64, -24}, {-64, 2}, {-64, 2}, {-64, 4}}, color = {0, 0, 127}));
-      connect(ideal_train1.flangeT, inertia_trans1.flangeT_P) annotation(
-        Line(points = {{74, 4}, {74, 2}, {84, 2}}, color = {0, 85, 0}));
+    connect(ideal_train1.flangeT, inertia_trans1.flangeT_P) annotation(
+        Line(points = {{74, 4}, {74, -18}}, color = {0, 85, 0}));
+    connect(inertia_trans1.y, control_deviation.y) annotation(
+        Line(points = {{71, -24}, {-64, -24}, {-64, 4}}, color = {0, 0, 127}));
       connect(ideal_train1.flangeR, inertia_rot1.flangeR_N) annotation(
         Line(points = {{64, 10}, {56, 10}}, color = {255, 0, 0}));
       connect(dc_machine1.flangeR, inertia_rot1.flangeR_P) annotation(

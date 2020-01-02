@@ -86,18 +86,9 @@ package SimpleElectric
     
     off = if (sign_i*p.i<0 and b) then true else false;
     
-    0 = if off then p.i else u; //??Hilfe wie nur bei nulldurchgang schalten?
+    0 = if off then p.i else u; 
     annotation(
         Icon(graphics = {Line(origin = {-13.84, 4.01259}, points = {{-22.16, -4.15998}, {3.84002, -4.15998}, {21.84, 3.84002}, {21.84, 3.84002}}, color = {0, 0, 127}), Line(origin = {22, 0}, points = {{-14, 0}, {14, 0}, {14, 0}}, color = {0, 0, 127}), Ellipse(origin = {-11, 1}, lineColor = {0, 0, 127}, extent = {{-1, 1}, {3, -3}}, endAngle = 360), Ellipse(origin = {7, 1}, lineColor = {0, 0, 127}, extent = {{-1, 1}, {3, -3}}, endAngle = 360)}));end switch;
-
-    model SimpleTriac
-    parameter SI.Voltage u_fire = 50 "voltage where the Triac is conductive";
-    
-    extends Interface.TwoPin;
-    
-    equation
-
-    end SimpleTriac;
   end BasisElements;
 
   package Interface
